@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Realtime Drawing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!-- p5.js y ml5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      overflow-x: hidden;
+    }
+
+    .heading {
+      width: 100%;
+      font-size: 20px;
+      padding: 20px;
+      white-space: normal;
+    }
+
+    .note {
+      font-size: 15px;
+      font-weight: normal;
+      display: block;
+      margin-top: 10px;
+    }
+
+    #square_side {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .copy_right_footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #222;
+      color: white;
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .heading {
+        font-size: 16px;
+        padding: 15px;
+      }
+
+      .note {
+        font-size: 13px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container-fluid text-center">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+        <h3 class="btn btn-info heading">
+          Cambia el alto, ancho y posición de un cuadrado en tiempo real
+          <span class="note">
+            NOTA - Junta tu muñeca izquierda y derecha para reducir el tamaño del cuadrado 
+            y sepáralas para aumentar el tamaño del cuadrado. 
+            Mueve tu nariz para mover la posición del cuadrado.
+          </span>
+          <span id="square_side"></span>
+        </h3>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="copy_right_footer text-center">
+    Desarrollado por el equipo de BYJU'S FutureSchool
+  </div>
+
+  <!-- Script principal -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
